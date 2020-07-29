@@ -1,0 +1,90 @@
+{
+    "name": "sierratecnologia/legislateiro",
+    "description": "legislateiro",
+    "type": "library",
+    "keywords": [
+        "sierratecnologia",
+        "legislateiro"
+    ],
+    "license": "MIT",
+    "homepage": "https://sierratecnologia.com/packages/legislateiro/",
+    "support": {
+        "email": "help@sierratecnologia.com.br",
+        "issues": "https://github.com/sierratecnologia/legislateiro/issues",
+        "source": "https://github.com/sierratecnologia/legislateiro",
+        "docs": "https://github.com/sierratecnologia/legislateiro/blob/master/README.md"
+    },
+    "authors": [
+        {
+            "name": "SierraTecnologia",
+            "homepage": "https://sierratecnologia.com.br",
+            "email": "help@sierratecnologia.com.br"
+        },
+        {
+            "name": "Ricardo Rebello Sierra",
+            "email": "contato@ricardosierra.com.br"
+        }
+    ],
+    "require": {
+        "php": ">=7.0",
+        "sierratecnologia/crypto": "dev-master",
+        "sierratecnologia/payment-laravel": "dev-master"
+    },
+    "autoload": {
+        "classmap": [
+            "database/seeds",
+            "database/factories",
+            ".discovery"
+        ],
+        "psr-4": {
+            "App\\": "app/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Tests\\": "tests/"
+        }
+    },
+    "scripts": {
+        "post-autoload-dump": [
+            "Illuminate\\Foundation\\ComposerScripts::postAutoloadDump",
+            "@php artisan package:discover --ansi"
+        ],
+        "post-root-package-install": [
+            "@php -r \"file_exists('.env') || copy('.env.example', '.env');\""
+        ],
+        "post-create-project-cmd": [
+            "@php artisan key:generate --ansi"
+        ]
+    },
+    "repositories": [
+        {
+            "type": "path",
+            "url": "/sierra/Dev/Libs/**",
+            "options": {
+                "symlink": true
+            }
+        },
+        {
+            "type": "vcs",
+            "url":  "git@github.com:botman/studio-addons.git"
+        }
+    ],
+    "extra": {
+        "laravel": {
+            "dont-discover": [
+                "sentry/sentry-laravel",
+                "laravel/cashier",
+                "hyn/multi-tenant",
+                "scaffold-interface"
+            ]
+        }
+    },
+    "config": {
+        "preferred-install": "dist",
+        "sort-packages": true,
+        "optimize-autoloader": true
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}
