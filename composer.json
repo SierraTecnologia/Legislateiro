@@ -26,7 +26,7 @@
         }
     ],
     "require": {
-        "php": ">=7.0",
+        "php": "^7.4",
         "sierratecnologia/crypto": "dev-master",
         "sierratecnologia/payment-laravel": "dev-master"
     },
