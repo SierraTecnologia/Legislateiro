@@ -123,7 +123,7 @@ class ContratoRepository
      * Updates Contratos into database.
      *
      * @param Contrato $order
-     * @param array  $payload
+     * @param array    $payload
      *
      * @return Contratos
      */
