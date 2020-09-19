@@ -5,7 +5,7 @@ namespace Legislateiro\Exceptions;
 /**
  * Generic exception
  */
-class Exception extends \Support\Exceptions\Exception
+class Exception extends \Pedreiro\Exceptions\Exception
 {
     //
 }
