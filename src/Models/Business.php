@@ -2,7 +2,7 @@
 
 namespace Legislateiro\Models\Actors;
 
-use Support\Models\Base;
+use Pedreiro\Models\Base;
 use Cocur\Slugify\Slugify;
 
 class Contrato extends Base
