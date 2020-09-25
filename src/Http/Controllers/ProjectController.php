@@ -224,7 +224,7 @@ class ProjectController extends Base
     //  * @param  int  $id
     //  * @return \Illuminate\Http\Response
     //  */
-    // public function edit($id)
+    // public function edit(Request $request, $id)
     // {
     //     $order = Project::find($id);
 
@@ -261,7 +261,7 @@ class ProjectController extends Base
     //  * @param  int  $id
     //  * @return \Illuminate\Http\Response
     //  */
-    // public function destroy($id)
+    // public function destroy(Request $request, $id)
     // {
     //     $order = Project::findOrFail($id);
     //     $order->delete();
