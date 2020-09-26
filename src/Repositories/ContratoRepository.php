@@ -7,10 +7,7 @@ use Legislateiro\Models\Contrato;
 
 class ContratoRepository
 {
-    public function __construct(Contrato $model)
-    {
-        $this->model = $model;
-    }
+
 
     /**
      * Returns all Contratos.
@@ -81,42 +78,6 @@ class ContratoRepository
     public function find($id)
     {
         return $this->model->find($id);
-    }
-
-    /**
-     * Find Contratos by given id.
-     *
-     * @param int $id
-     *
-     * @return \Illuminate\Support\Collection|null|static|Contratos
-     */
-    public function getByCustomer($id)
-    {
-        return $this->model->where('user_id', '=', $id);
-    }
-
-    /**
-     * Find Contratos by given id.
-     *
-     * @param int $id
-     *
-     * @return \Illuminate\Support\Collection|null|static|Contratos
-     */
-    public function getByCustomerAndId($customer, $id)
-    {
-        return $this->model->where('user_id', $customer)->where('id', $id)->first();
-    }
-
-    /**
-     * Find Contratos by given id.
-     *
-     * @param int $id
-     *
-     * @return \Illuminate\Support\Collection|null|static|Contratos
-     */
-    public function getByCustomerAndUuid($customer, $id)
-    {
-        return $this->model->where('user_id', $customer)->where('uuid', $id)->first();
     }
 
     /**
