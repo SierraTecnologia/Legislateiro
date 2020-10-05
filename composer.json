@@ -27,8 +27,8 @@
     ],
     "require": {
         "php": "^7.4",
-        "sierratecnologia/crypto": "dev-master",
-        "sierratecnologia/payment-laravel": "dev-master"
+        "sierratecnologia/crypto": "^0.4.0",
+        "sierratecnologia/payment-laravel": "^0.4.0"
     },
     "autoload": {
         "classmap": [
@@ -57,7 +57,6 @@
             "@php artisan key:generate --ansi"
         ]
     },
-    "repositories": [
         {
             "type": "path",
             "url": "/sierra/Dev/Libs/**",
