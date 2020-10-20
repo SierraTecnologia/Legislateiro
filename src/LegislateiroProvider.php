@@ -193,7 +193,7 @@ class LegislateiroProvider extends ServiceProvider
         $this->publishes(
             [
             // Paths
-            $this->getPublishesPath('config/sitec') => config_path('sitec'),
+            $this->getPublishesPath('config'.DIRECTORY_SEPARATOR.'sitec') => config_path('sitec'),
             ], ['config',  'sitec', 'sitec-config']
         );
 
@@ -214,7 +214,7 @@ class LegislateiroProvider extends ServiceProvider
         $this->loadViewsFrom($viewsPath, 'legislateiro');
         $this->publishes(
             [
-            $viewsPath => base_path('resources/views/vendor/legislateiro'),
+            $viewsPath => base_path('resources'.DIRECTORY_SEPARATOR.'views'.DIRECTORY_SEPARATOR.'vendor'.DIRECTORY_SEPARATOR.'legislateiro'),
             ], ['views',  'sitec', 'sitec-views']
         );
 
@@ -225,7 +225,7 @@ class LegislateiroProvider extends ServiceProvider
         // Publish lanaguage files
         $this->publishes(
             [
-            $this->getResourcesPath('lang') => resource_path('lang/vendor/legislateiro')
+            $this->getResourcesPath('lang') => resource_path('lang'.DIRECTORY_SEPARATOR.'vendor'.DIRECTORY_SEPARATOR.'legislateiro')
             ], ['lang',  'sitec', 'sitec-lang', 'translations']
         );
 
@@ -242,7 +242,7 @@ class LegislateiroProvider extends ServiceProvider
         Config::set(
             'logging.channels.sitec-legislateiro', [
             'driver' => 'single',
-            'path' => storage_path('logs/sitec-legislateiro.log'),
+            'path' => storage_path('logs'.DIRECTORY_SEPARACTOR.'sitec-legislateiro.log'),
             'level' => env('APP_LOG_LEVEL', 'debug'),
             ]
         );
