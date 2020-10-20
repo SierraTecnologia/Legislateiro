@@ -242,7 +242,7 @@ class LegislateiroProvider extends ServiceProvider
         Config::set(
             'logging.channels.sitec-legislateiro', [
             'driver' => 'single',
-            'path' => storage_path('logs'.DIRECTORY_SEPARACTOR.'sitec-legislateiro.log'),
+            'path' => storage_path('logs'.DIRECTORY_SEPARATOR.'sitec-legislateiro.log'),
             'level' => env('APP_LOG_LEVEL', 'debug'),
             ]
         );
