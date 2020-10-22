@@ -6,7 +6,7 @@ use Illuminate\Http\Request;
 use Legislateiro\Models\Code\Project;
 use Yajra\Datatables\Datatables;
 use Facilitador\Exceptions\Exception;
-use Facilitador\Http\Controllers\Admin\Base;
+use Pedreiro\Http\Controllers\Admin\Base;
 
 class ProjectController extends Base
 {
