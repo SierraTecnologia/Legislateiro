@@ -53,7 +53,7 @@ class LegislateiroProvider extends ServiceProvider
                 'icon_color'  => 'blue',
                 'label_color' => 'success',
                 'level'       => 3, // 0 (Public), 1, 2 (Admin) , 3 (Root)
-                // 'access' => \App\Models\Role::$ADMIN
+                // 'access' => \Porteiro\Models\Role::$ADMIN
             ],
             'Procurar' => [
                 [
@@ -63,7 +63,7 @@ class LegislateiroProvider extends ServiceProvider
                     'icon_color'  => 'blue',
                     'label_color' => 'success',
                     'level'       => 3, // 0 (Public), 1, 2 (Admin) , 3 (Root)
-                    // 'access' => \App\Models\Role::$ADMIN
+                    // 'access' => \Porteiro\Models\Role::$ADMIN
                 ],
             ],
         ],
