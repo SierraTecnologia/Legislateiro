@@ -2362,7 +2362,7 @@
                 "illuminate/support": "^7.0 || ^8.0",
                 "illuminate/view": "^7.0 || ^8.0",
                 "nesbot/carbon": ">=1.26",
-                "php": "^7.4",
+                "php": "^7.2|^8.0",
                 "sierratecnologia/payment-php": "dev-master",
                 "sierratecnologia/telefonica": "dev-master",
                 "symfony/http-kernel": ">=4.2"
@@ -2488,7 +2488,7 @@
             },
             "require": {
                 "laravel/helpers": "^1.1",
-                "php": "^7.4",
+                "php": "^7.2|^8.0",
                 "propaganistas/laravel-phone": "^4.2.5",
                 "sierratecnologia/crypto": "dev-master"
             },
@@ -4498,7 +4498,7 @@
     "prefer-stable": true,
     "prefer-lowest": false,
     "platform": {
-        "php": "^7.4"
+        "php": "^7.2|^8.0"
     },
     "platform-dev": [],
     "plugin-api-version": "1.1.0"
