@@ -1,11 +1,14 @@
 <?php
+/**
+ * @todo Nao Usado
+ */
 
 namespace Legislateiro\Models\Actors;
 
 use Pedreiro\Models\Base;
 use Cocur\Slugify\Slugify;
 
-class Contrato extends Base
+class Business extends Base
 {
     use AsOrganization;
 

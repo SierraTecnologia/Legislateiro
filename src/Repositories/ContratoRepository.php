@@ -36,7 +36,7 @@ class ContratoRepository
             $model = $this->model->orderBy('created_at', 'desc');
         }
 
-        return $model->paginate(\Illuminate\Support\Facades\Config::get('cms.pagination', 25));
+        return $model->paginate(\Illuminate\Support\Facades\Config::get('siravel.pagination', 25));
     }
 
     /**
