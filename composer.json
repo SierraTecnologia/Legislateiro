@@ -31,13 +31,8 @@
         "sierratecnologia/payment-laravel": "dev-master"
     },
     "autoload": {
-        "classmap": [
-            "database/seeds",
-            "database/factories",
-            ".discovery"
-        ],
         "psr-4": {
-            "App\\": "app/"
+            "Legislateiro\\": "src/"
         }
     },
     "autoload-dev": {
@@ -46,45 +41,24 @@
         }
     },
     "scripts": {
-        "post-autoload-dump": [
-            "Illuminate\\Foundation\\ComposerScripts::postAutoloadDump",
-            "@php artisan package:discover --ansi"
-        ],
-        "post-root-package-install": [
-            "@php -r \"file_exists('.env') || copy('.env.example', '.env');\""
-        ],
-        "post-create-project-cmd": [
-            "@php artisan key:generate --ansi"
-        ]
+        "post-install-cmd": [],
+        "post-update-cmd": [],
+        "post-create-project-cmd": []
     },
-    "repositories": [
-        {
-            "type": "path",
-            "url": "/sierra/Dev/Libs/**",
-            "options": {
-                "symlink": true
-            }
-        },
-        {
-            "type": "vcs",
-            "url":  "git@github.com:botman/studio-addons.git"
-        }
-    ],
+    "repositories": [{"type": "path","url":"../**","options":{"symlink": true}}],
+    "minimum-stability": "dev",
+    "prefer-stable": true,
     "extra": {
         "laravel": {
+            "providers": [
+                "Legislateiro\\LegislateiroProvider"
+            ],
             "dont-discover": [
-                "sentry/sentry-laravel",
-                "laravel/cashier",
-                "hyn/multi-tenant",
-                "scaffold-interface"
+                "laravel/cashier"
             ]
         }
     },
-    "config": {
-        "preferred-install": "dist",
-        "sort-packages": true,
-        "optimize-autoloader": true
-    },
-    "minimum-stability": "dev",
-    "prefer-stable": true
+    "require-dev": {
+        "phpro/grumphp": "^1.3"
+    }
 }

@@ -2,7 +2,7 @@
 
 namespace Legislateiro\Http\Policies;
 
-use App\Models\User;
+use Legislateiro\Models\User;
 
 /**
  * Class LegislateiroPolicy.

@@ -75,18 +75,18 @@ class Kernel extends ConsoleKernel
 
 
 
-        //     $schedule->command(Commands\Tools\PhotoApp\TestScheduler::class)
+        //     $schedule->command(Commands\Tools\PhotoLegislateiro\TestScheduler::class)
         //     ->hourly();
 
-        // $schedule->command(Commands\Tools\PhotoApp\DeleteDetachedPhotosOlderThanWeek::class)
+        // $schedule->command(Commands\Tools\PhotoLegislateiro\DeleteDetachedPhotosOlderThanWeek::class)
         //     ->dailyAt('00:00')
         //     ->onOneServer();
 
-        // $schedule->command(Commands\Tools\PhotoApp\DeleteUnusedObjectsFromPhotoStorage::class)
+        // $schedule->command(Commands\Tools\PhotoLegislateiro\DeleteUnusedObjectsFromPhotoStorage::class)
         //     ->dailyAt('00:10')
         //     ->onOneServer();
 
-        // $schedule->command(Commands\Tools\PhotoApp\SendWeeklySubscriptionMails::class)
+        // $schedule->command(Commands\Tools\PhotoLegislateiro\SendWeeklySubscriptionMails::class)
         //     ->weekly()
         //     ->sundays()
         //     ->at('06:00')

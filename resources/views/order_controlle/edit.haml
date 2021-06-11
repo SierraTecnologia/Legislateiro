@@ -14,7 +14,7 @@
 
 	%fieldset
 		.legend Other
-		!= Former::radiolist('category')->from(App\Models\Article::$categories)->inline()
+		!= Former::radiolist('category')->from(Legislateiro\Models\Article::$categories)->inline()
 		!= Former::select('category_id', 'Categories')->addOption(null)->fromQuery(Facilitador\Models\Category::ordered()->get(), 'name')
 		!= Former::date('date')->value('now')
 		!= Former::date('date_end')
