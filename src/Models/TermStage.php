@@ -5,8 +5,9 @@ namespace Legislateiro\Models;
 use Carbon\Carbon;
 use Exception;
 use Legislateiro\Traits\UsedByTeams;
+use Pedreiro\Models\Base;
 
-class TermStage extends BaseModel
+class TermStage extends Base
 {
 
     public const RULES = [
