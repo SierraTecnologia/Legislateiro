@@ -31,13 +31,8 @@
         "sierratecnologia/payment-laravel": "^0.3.0 | ^0.4.0"
     },
     "autoload": {
-        "classmap": [
-            "database/seeds",
-            "database/factories",
-            ".discovery"
-        ],
         "psr-4": {
-            "App\\": "app/"
+            "Legislateiro\\": "src/"
         }
     },
     "autoload-dev": {
@@ -63,12 +58,15 @@
     "prefer-stable": true,
     "extra": {
         "laravel": {
+            "providers": [
+                "Legislateiro\\LegislateiroProvider"
+            ],
             "dont-discover": [
-                "sentry/sentry-laravel",
-                "laravel/cashier",
-                "hyn/multi-tenant",
-                "scaffold-interface"
+                "laravel/cashier"
             ]
         }
+    },
+    "require-dev": {
+        "phpro/grumphp": "^1.3"
     }
 }

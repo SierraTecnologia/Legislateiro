@@ -65,7 +65,7 @@ trait HasRoutine
     }
 
     /**
-     * @param string|array|\ArrayAccess|\\App\Models\Routine $routines
+     * @param string|array|\ArrayAccess|\\Legislateiro\Models\Routine $routines
      */
     public function setRoutineAttribute($routines)
     {
@@ -80,7 +80,7 @@ trait HasRoutine
 
     /**
      * @param \Illuminate\Database\Eloquent\Builder   $query
-     * @param array|\ArrayAccess|\\App\Models\Routine $routines
+     * @param array|\ArrayAccess|\\Legislateiro\Models\Routine $routines
      *
      * @return \Illuminate\Database\Eloquent\Builder
      */
@@ -103,7 +103,7 @@ trait HasRoutine
 
     /**
      * @param \Illuminate\Database\Eloquent\Builder   $query
-     * @param array|\ArrayAccess|\\App\Models\Routine $routines
+     * @param array|\ArrayAccess|\\Legislateiro\Models\Routine $routines
      *
      * @return \Illuminate\Database\Eloquent\Builder
      */
@@ -160,7 +160,7 @@ trait HasRoutine
     }
 
     /**
-     * @param array|\ArrayAccess|\\App\Models\Routine $routines
+     * @param array|\ArrayAccess|\\Legislateiro\Models\Routine $routines
      *
      * @return $this
      */
@@ -176,7 +176,7 @@ trait HasRoutine
     }
 
     /**
-     * @param string|\\App\Models\Routine $routine
+     * @param string|\\Legislateiro\Models\Routine $routine
      *
      * @return $this
      */

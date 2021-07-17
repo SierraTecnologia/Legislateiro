@@ -24,13 +24,18 @@ class LegislateiroProvider extends ServiceProvider
 {
     use ConsoleTools;
 
+    public $packageName = 'legislateiro';
+    const pathVendor = 'sierratecnologia/legislateiro';
+
     public static $aliasProviders = [
         'Legislateiro' => \Legislateiro\Facades\Legislateiro::class,
     ];
 
     public static $providers = [
-
-        \Support\SupportProviderService::class,
+        // \Transmissor\TransmissorProvider::class,
+        // \Population\PopulationProvider::class,
+        // \Telefonica\TelefonicaProvider::class,
+        // \Bancario\BancarioProvider::class,
 
         
     ];
@@ -48,17 +53,17 @@ class LegislateiroProvider extends ServiceProvider
         ],
         'Legislateiro' => [
             [
-                'text'        => 'Procurar',
+                'text'        => 'Contratos',
                 'icon'        => 'fas fa-fw fa-search',
                 'icon_color'  => 'blue',
                 'label_color' => 'success',
                 'level'       => 3, // 0 (Public), 1, 2 (Admin) , 3 (Root)
                 // 'access' => \Porteiro\Models\Role::$ADMIN
             ],
-            'Procurar' => [
+            'Contratos' => [
                 [
                     'text'        => 'Projetos',
-                    'route'       => 'rica.legislateiro.projetos.index',
+                    'route'       => 'admin.legislateiro.parteTypes.index',
                     'icon'        => 'fas fa-fw fa-ship',
                     'icon_color'  => 'blue',
                     'label_color' => 'success',
@@ -79,11 +84,9 @@ class LegislateiroProvider extends ServiceProvider
         $this->registerDirectories();
 
         // COloquei no register pq nao tava reconhecendo as rotas para o adminlte
-        $this->app->booted(
-            function () {
-                $this->routes();
-            }
-        );
+        $this->app->booted(function () {
+            $this->routes();
+        });
 
         $this->loadLogger();
     }
@@ -100,27 +103,35 @@ class LegislateiroProvider extends ServiceProvider
         }
 
         /**
-         * Legislateiro; Routes
+         * Transmissor; Routes
          */
-        Route::group(
-            [
-                'namespace' => '\Legislateiro\Http\Controllers',
-                'prefix' => \Illuminate\Support\Facades\Config::get('application.routes.main', ''),
-                'as' => 'rica.',
-                // 'middleware' => 'rica',
-            ], function ($router) {
-                include __DIR__.'/../routes/web.php';
-            }
-        );
+        $this->loadRoutesForRiCa(__DIR__.DIRECTORY_SEPARATOR.'..'.DIRECTORY_SEPARATOR.'routes');
     }
+
 
     /**
      * Register the services.
      */
     public function register()
     {
-        $this->mergeConfigFrom($this->getPublishesPath('config'.DIRECTORY_SEPARATOR.'sitec'.DIRECTORY_SEPARATOR.'legislateiro.php'), 'sitec.legislateiro');
-        
+        $this->mergeConfigFrom($this->getPublishesPath('config'.DIRECTORY_SEPARATOR.'legislateiro.php'), 'legislateiro');
+        // Publish config files
+
+        if ($this->app->runningInConsole()) {
+            $this->publishes(
+                [
+                __DIR__ . '/../config/legislateiro.php' => config_path('legislateiro.php'),
+                ],
+                'config'
+            );
+
+            $this->publishes(
+                [
+                __DIR__ . '/../resources/views' => base_path('resources'.DIRECTORY_SEPARATOR.'views'.DIRECTORY_SEPARATOR.'vendor'.DIRECTORY_SEPARATOR.'legislateiro'),
+                ],
+                'views'
+            );
+        }
 
         $this->setProviders();
         // $this->routes();
