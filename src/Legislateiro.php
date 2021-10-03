@@ -41,6 +41,9 @@ class Legislateiro
         return $this->version;
     }
 
+    /**
+     * @return void
+     */
     protected function findVersion()
     {
         if (!is_null($this->version)) {

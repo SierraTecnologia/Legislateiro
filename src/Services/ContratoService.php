@@ -99,7 +99,7 @@ class ContratoService
      *
      * @param int $id
      *
-     * @return Contratos
+     * @return Contratos|false
      */
     public function cancel($orderId)
     {

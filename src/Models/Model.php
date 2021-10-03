@@ -16,7 +16,7 @@ use Illuminate\Support\Facades\Log;
 class Model extends EloquentModel
 {
 
-    public function hasAttribute($attr)
+    public function hasAttribute($attr): bool
     {
         return array_key_exists($attr, $this->attributes);
     }
