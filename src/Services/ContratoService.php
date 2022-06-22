@@ -28,7 +28,7 @@ class ContratoService
     /**
      * Get all Contratos.
      *
-     * @return Illuminate\Pagination\LengthAwarePaginator
+     * @return \Illuminate\Pagination\LengthAwarePaginator
      */
     public function paginated()
     {
