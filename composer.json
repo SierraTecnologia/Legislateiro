@@ -27,8 +27,7 @@
     ],
     "require": {
         "php": "^7.2|^8.0",
-        "sierratecnologia/crypto": "dev-master",
-        "sierratecnologia/payment-laravel": "dev-master"
+        "sierratecnologia/crypto": "dev-master"
     },
     "autoload": {
         "psr-4": {
