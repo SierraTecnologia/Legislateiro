@@ -49,6 +49,7 @@ class LegislateiroProvider extends ServiceProvider
             'icon' => 'fas fa-fw fa-search',
             'icon_color' => "blue",
             'label_color' => "success",
+            'section'     => 'rica',
             'level'       => 3, // 0 (Public), 1, 2 (Admin) , 3 (Root)
         ],
         'Legislateiro' => [
@@ -57,6 +58,7 @@ class LegislateiroProvider extends ServiceProvider
                 'icon'        => 'fas fa-fw fa-search',
                 'icon_color'  => 'blue',
                 'label_color' => 'success',
+                'section'     => 'rica',
                 'level'       => 3, // 0 (Public), 1, 2 (Admin) , 3 (Root)
                 // 'access' => \Porteiro\Models\Role::$ADMIN
             ],
@@ -67,6 +69,7 @@ class LegislateiroProvider extends ServiceProvider
                     'icon'        => 'fas fa-fw fa-ship',
                     'icon_color'  => 'blue',
                     'label_color' => 'success',
+                    'section'     => 'rica',
                     'level'       => 3, // 0 (Public), 1, 2 (Admin) , 3 (Root)
                     // 'access' => \Porteiro\Models\Role::$ADMIN
                 ],
