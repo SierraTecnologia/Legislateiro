@@ -1,20 +1,20 @@
-name: Psalm
+name: PHPStan
 
 on:
   push:
     branches: [ main, master, develop ]
     paths:
       - '**.php'
-      - 'psalm.xml*'
+      - 'phpstan.neon'
   pull_request:
     branches: [ main, master, develop ]
     paths:
       - '**.php'
-      - 'psalm.xml*'
+      - 'phpstan.neon'
 
 jobs:
-  psalm:
-    name: Psalm Analysis
+  phpstan:
+    name: PHPStan Analysis (Level 8)
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
@@ -36,5 +36,5 @@ jobs:
       - name: Install dependencies
         run: composer install --no-interaction --prefer-dist
 
-      - name: Run Psalm
-        run: ./vendor/bin/psalm --output-format=github
+      - name: Run PHPStan
+        run: vendor/bin/phpstan analyse src/ --level=8 --memory-limit=512M
