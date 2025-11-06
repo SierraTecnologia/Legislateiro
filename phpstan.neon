@@ -1,0 +1,22 @@
+parameters:
+    level: 8
+    paths:
+        - src
+    excludePaths:
+        - vendor
+        - storage
+        - node_modules
+
+    # Ignorar erros comuns do Laravel
+    ignoreErrors:
+        - '#Call to an undefined method Illuminate\\[a-zA-Z\\]+::[a-zA-Z]+\(\)#'
+        - '#Unsafe usage of new static#'
+
+    # Habilitar verificações mais rigorosas
+    checkMissingIterableValueType: true
+    checkGenericClassInNonGenericObjectType: false
+    reportUnmatchedIgnoredErrors: false
+
+    # Bootstrap para Laravel
+    bootstrapFiles:
+        - vendor/autoload.php

@@ -1,0 +1,42 @@
+<?xml version="1.0"?>
+<ruleset name="Legislateiro Coding Standard">
+    <description>PSR-12 Coding Standard for Legislateiro package</description>
+
+    <!-- Mostrar progresso -->
+    <arg value="p"/>
+
+    <!-- Usar cores na saída -->
+    <arg name="colors"/>
+
+    <!-- Arquivos e diretórios a verificar -->
+    <file>src</file>
+    <file>tests</file>
+
+    <!-- Excluir diretórios -->
+    <exclude-pattern>*/vendor/*</exclude-pattern>
+    <exclude-pattern>*/storage/*</exclude-pattern>
+    <exclude-pattern>*/node_modules/*</exclude-pattern>
+    <exclude-pattern>*/database/migrations/*</exclude-pattern>
+
+    <!-- Usar padrão PSR-12 -->
+    <rule ref="PSR12">
+        <!-- Permitir constantes em maiúsculas (comum em Laravel) -->
+        <exclude name="PSR1.Classes.ClassDeclaration.MissingNamespace"/>
+    </rule>
+
+    <!-- Configurações adicionais para Laravel -->
+    <rule ref="Generic.Files.LineLength">
+        <properties>
+            <property name="lineLimit" value="120"/>
+            <property name="absoluteLineLimit" value="180"/>
+        </properties>
+    </rule>
+
+    <!-- Verificar complexidade ciclomática -->
+    <rule ref="Generic.Metrics.CyclomaticComplexity">
+        <properties>
+            <property name="complexity" value="10"/>
+            <property name="absoluteComplexity" value="15"/>
+        </properties>
+    </rule>
+</ruleset>
